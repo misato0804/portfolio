@@ -53,15 +53,15 @@ body {
   before:bg-white
 }
 
-/*.list-circle {*/
-/*  @apply*/
-/*  before::content-['']*/
-/*  before:absolute*/
-/*  before:w-[20px]*/
-/*  before:h-[20px]*/
-/*  before:border-4*/
-/*  before:border-slate-50*/
-/*  before:rounded-full*/
-/*  before:left-0*/
-/*  before:top-1*/
-/*}*/
+.list-circle {
+  @apply
+  before:content-['']
+  before:absolute
+  before:w-[20px]
+  before:h-[20px]
+  before:border-4
+  before:border-slate-50
+  before:rounded-full
+  before:left-0
+  before:top-1
+}
