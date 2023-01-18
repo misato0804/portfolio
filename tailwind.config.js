@@ -43,16 +43,16 @@ module.exports = {
         },
         "animatedText": {
           "0%,to" : {
-            "background-size": "400% 400%",
-            "background-position:": "left center"
+            backgroundSize: "400% 400%",
+            backgroundPosition: "left center"
           },
           "50%": {
-            "background-size": "400% 400%",
-            "background-position": "right center"
+            backgroundSize: "400% 400%",
+            backgroundPosition: "right center"
           },
           "100%" : {
-            "background-size": "400% 400%",
-            "background-position:": "left center"
+            backgroundSize: "400% 400%",
+            backgroundPosition: "left center"
           }
         }
       }
