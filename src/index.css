@@ -40,3 +40,28 @@ body {
   @apply
   hover:transition-all
 }
+
+.about-container {
+  @apply
+  before:absolute
+  before:inline-block
+  before:left-[10px]
+  before:h-full
+  before:top-[23px]
+  before:content-['']
+  before:w-[1px]
+  before:bg-white
+}
+
+.list-circle {
+  @apply
+  before:content-['']
+  before:absolute
+  before:w-[20px]
+  before:h-[20px]
+  before:border-4
+  before:border-slate-50
+  before:rounded-full
+  before:left-0
+  before:top-1
+}

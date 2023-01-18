@@ -8,7 +8,6 @@ const Home = () => {
         <section className="relative w-4/5 mt-20 mx-auto text-center z-10">
             <div className="w-full m-auto">
                 <h3 className="sub-title">Hi, there. I'm Misato Tanno</h3>
-                <h1 className="font-extrabold text-transparent text-5xl md:text-8xl bg-clip-text bg-gradient-to-r from-amber-200 via-back-text to-cyan-50 animate-animationTexted">Web developer</h1>
                 <p className="description mt-12">
                     You can also use variant modifiers to target media queries like responsive breakpoints, dark mode,
                     prefers-reduced-motion, and more. For example, use md:text-base to apply the text-base utility at
