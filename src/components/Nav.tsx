@@ -20,8 +20,10 @@ const Nav: FC = () => {
 
     return (
         <nav className="py-12">
-            <div className="flex justify-between">
-                <h1 className="text-xl">あ</h1>
+            <div className="flex justify-between items-center">
+                <Link to={"/"}>
+                    <img src={`${process.env.PUBLIC_URL+ '/logoMT.png'}`} width={50}/>
+                </Link>
                 {windowDimensions.width >= 768 ?
                     <ul className="m-0 w-3/5 flex justify-around font-thin">
                         <li className="inline-block duration-150 hover:animate-shake-horizontal"><Link to="/">Home</Link></li>

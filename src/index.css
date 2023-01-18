@@ -26,14 +26,14 @@ body {
 
 .sub-title {
   @apply
-  text-sm
+  text-base
   font-extralight
 }
 
 .description {
   @apply
   font-extralight
-  text-xs
+  text-lg
 }
 
 .line-frame {

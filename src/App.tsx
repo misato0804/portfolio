@@ -9,7 +9,7 @@ import Contact from "./pages/Contact";
 function App() {
   return (
       <div className="App common">
-        <h3 className="z-0 fixed text-9xl origin-bottom-left rotate-90 text-back-text top-40 left-0 font-extrabold">Hi,there</h3>
+        <h3 className="z-0 fixed text-9xl origin-bottom-left rotate-90 text-back-text top-40 left-0 font-extrabold">Hi,there!!</h3>
         < Router>
           < Nav />
           <Routes>
