@@ -66,7 +66,7 @@ const Contact = () => {
                                 type="text"
                                 name="name"
                                 placeholder="Name"
-                                className=" text-sm border-1 border-grey-800 rounded-md p-3 w-full focus:outline-none bg-back-text"
+                                className="text-sm border-1 border-grey-800 rounded-md p-3 w-full focus:outline-none bg-back-text"
                             />
                         </div>
                         <div className="mb-6">
