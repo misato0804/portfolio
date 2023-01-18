@@ -21,7 +21,7 @@ module.exports = {
       },
       animation: {
         "shake-horizontal": "shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both",
-        "animationTexted": "animatedText 10s infinite"
+        "animationTexted": "animatedText 7s infinite"
       },
       keyframes: {
         "shake-horizontal": {
@@ -42,7 +42,7 @@ module.exports = {
           }
         },
         "animatedText": {
-          "0%" : {
+          "0%,to" : {
             "background-size": "400% 400%",
             "background-position:": "left center"
           },
