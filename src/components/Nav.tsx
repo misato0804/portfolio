@@ -1,7 +1,19 @@
 import React, {FC, useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 const Nav: FC = () => {
+    const [t, i18n] = useTranslation();
+    const [lang, setLang] = useState('en');
+
+    const setLanguage = (e: React.ChangeEvent<{ value: string }>) => {
+        setLang(e.target.value)
+    }
+
+    useEffect(() => {
+        i18n.changeLanguage(lang);
+    }, [lang, i18n]);
+
     const getWindowDimensions = () => {
         const {innerWidth: width, innerHeight: height} = window;
         return {
@@ -22,14 +34,23 @@ const Nav: FC = () => {
         <nav className="py-12">
             <div className="flex justify-between items-center">
                 <Link to={"/"}>
-                    <img src={`${process.env.PUBLIC_URL+ '/logoMT.png'}`} width={50}/>
+                    <img src={`${process.env.PUBLIC_URL + '/logoMT.png'}`} width={50}/>
                 </Link>
                 {windowDimensions.width >= 768 ?
                     <ul className="m-0 w-3/5 flex justify-around font-thin">
-                        <li className="inline-block duration-150 hover:animate-shake-horizontal"><Link to="/">Home</Link></li>
-                        <li className="inline-block duration-150 hover:animate-shake-horizontal"><Link to="/about">About</Link></li>
-                        <li className="inline-block duration-150 hover:animate-shake-horizontal"><Link to="/contact">Contact</Link></li>
-                        <li className="inline-block duration-150 hover:animate-shake-horizontal cursor-pointer">Language</li>
+                        <li className="inline-block duration-150 hover:animate-shake-horizontal"><Link
+                            to="/">{t("nav.home")}</Link></li>
+                        <li className="inline-block duration-150 hover:animate-shake-horizontal"><Link
+                            to="/about">{t("nav.about")}</Link></li>
+                        <li className="inline-block duration-150 hover:animate-shake-horizontal"><Link
+                            to="/resume">{t("nav.resume")}</Link></li>
+                        <li className="inline-block duration-150 hover:animate-shake-horizontal"><Link
+                            to="/contact">{t("nav.contact")}</Link></li>
+                        <select id="languages" className="bg-bg-dark cursor-pointer" onChange={setLanguage}>
+                            <option selected>{t("nav.languages")}</option>
+                            <option value="en">{t("nav.language.en")}</option>
+                            <option value="ja">{t("nav.language.ja")}</option>
+                        </select>
                     </ul>
                     :
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 cursor-pointer" fill="none"

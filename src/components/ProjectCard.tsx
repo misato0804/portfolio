@@ -14,7 +14,7 @@ const Project_card = (props: project) => {
         <div className="w-full h-[60%]">
             <div className="relative overflow-hidden w-full h-80 z-0 rounded-2xl">
                 <video muted loop autoPlay className="min-w-full min-h-full object-cover rounded-2xl">
-                    <source src={props.video} type="video/mp4"/>
+                    <source src={`${process.env.PUBLIC_URL}/movie.mp4`} type="video/mp4"/>
                 </video>
 
                 <div

@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "resume":"Resume",
+    "contact": "Contact",
+    "languages": "language",
+    "language": {
+      "en": "English",
+      "ja": "Japanese"
+    }
+  },
+  "greeting": "Hi, there. I'm Misato Tanno",
+  "introduction": "Currently based in Vancouver. \n My motivation and interest for development have brought me to where I am today.\nI enjoy my learning journey, which never ends!!",
+  "one_word": "What would you like to create with me?"
+
+}

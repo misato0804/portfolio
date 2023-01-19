@@ -65,3 +65,7 @@ body {
   before:left-0
   before:top-1
 }
+
+#root {
+  white-space: pre-line;
+}

@@ -43,61 +43,64 @@ const Contact = () => {
     }
 
     return (
-        <section className="relative z-[100]">
-            <div className="flex justify-center m-auto max-w-5xl">
-                <div>
-                    <div className="mb-6 relative">
-                        <h1 className="mb-4 text-4xl font-extrabold">Contact.</h1>
-                        {successToCopy}
-                        <p>Please fill out this form or send me an email at&ensp;
-                            <span
-                                className="underline cursor-pointer font-bold"
-                                onClick={clickHandler}
-                            >breitmeer.0804@gmail.com</span>
-                        </p>
-                        <br/>
-                        <p>I am excited about talking with you :)</p>
-                    </div>
-                    <form action="" ref={formRef}>
-                        <div className="mb-6">
-                            <input
-                                autoComplete={"off"}
-                                required
-                                type="text"
-                                name="name"
-                                placeholder="Name"
-                                className="text-sm border-1 border-grey-800 rounded-md p-3 w-full focus:outline-none bg-back-text"
-                            />
+        <>
+            <h3 className="z-0 fixed text-9xl origin-bottom-left rotate-90 text-back-text top-40 left-0 font-extrabold">Contact.</h3>
+            <section className="relative z-[100]">
+                <div className="flex justify-center m-auto max-w-5xl">
+                    <div>
+                        <div className="mb-6 relative">
+                            <h1 className="mb-4 text-4xl font-extrabold">Contact.</h1>
+                            {successToCopy}
+                            <p>Please fill out this form or send me an email at&ensp;
+                                <span
+                                    className="underline cursor-pointer font-bold"
+                                    onClick={clickHandler}
+                                >breitmeer.0804@gmail.com</span>
+                            </p>
+                            <br/>
+                            <p>I am excited about talking with you :)</p>
                         </div>
-                        <div className="mb-6">
-                            <input
-                                autoComplete="off"
-                                required
-                                type="email"
-                                name="email"
-                                placeholder="Email"
-                                className="text-sm border-1 border-grey-800 rounded-md p-3 w-full focus:outline-none bg-back-text"
-                            />
-                        </div>
-                        <div className="mb-6">
+                        <form action="" ref={formRef}>
+                            <div className="mb-6">
+                                <input
+                                    autoComplete={"off"}
+                                    required
+                                    type="text"
+                                    name="name"
+                                    placeholder="Name"
+                                    className="text-sm border-1 border-grey-800 rounded-md p-3 w-full focus:outline-none bg-back-text"
+                                />
+                            </div>
+                            <div className="mb-6">
+                                <input
+                                    autoComplete="off"
+                                    required
+                                    type="email"
+                                    name="email"
+                                    placeholder="Email"
+                                    className="text-sm border-1 border-grey-800 rounded-md p-3 w-full focus:outline-none bg-back-text"
+                                />
+                            </div>
+                            <div className="mb-6">
                             <textarea
                                 name="message"
                                 placeholder="Message"
                                 className="text-sm block h-48 resize-none border-1 border-grey-800 rounded-md p-3 w-full focus:outline-none bg-back-text"
                             />
-                        </div>
-                        <button
-                            className="bg-text-dark py-3 px-4 rounded-xl text-bg-dark text-sm mt-6"
-                            onClick={sendEmail}
-                        >SendMessage
-                        </button>
-                    </form>
+                            </div>
+                            <button
+                                className="bg-text-dark py-3 px-4 rounded-xl text-bg-dark text-sm mt-6"
+                                onClick={sendEmail}
+                            >SendMessage
+                            </button>
+                        </form>
 
+                    </div>
                 </div>
-            </div>
 
-            <MailModal showModal={showThanks}/>
-        </section>
+                <MailModal showModal={showThanks}/>
+            </section>
+        </>
     );
 };
 
