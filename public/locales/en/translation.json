@@ -19,5 +19,18 @@
     "about": "about",
     "resume": "resume",
     "get_in_touch": "Get in touch"
+  },
+  "about": {
+    "current" : {
+      "title" : "The journey of developer",
+      "description" : "I can never get enough of feeling pleasure when the idea takes shape on our browser. That's why I decided to get into tech field. \nI am a web developer working on full stack web applications from individual one to collaborative one. When it comes to study, I'm enjoying and trying to keep up with how fast the changing of the technologies goes by.\nMostly I'm working with React.js / Typescript / MongoDB. And I'm in the middle of leaning Next.js. In spite of how challenging to learn it is, I can stick to understand logically and comprehensively."
+    },
+    "past": {
+      "title": "As a concert promoter in Japan",
+      "description": "As a concert promoter with over 6 years of experience, I had gotten involved a tons of variety of concert despite of the scale. My previous company organizes the biggest music festival in norther Japan every spring and I was in charge of the biggest stage as a director. From booking artists to management of its budget, which is related to the festival, I took the responsibility. It sounds like a really tough work though (yeah...it did...hahaha), at the same time I got to communicate with so many people with different background. That is my irreplaceable treasure to anything."
+    },
+    "" : {
+
+    }
   }
 }

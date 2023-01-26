@@ -51,6 +51,7 @@ body {
   before:content-['']
   before:w-[1px]
   before:bg-white
+  before:opacity-10
 }
 
 .list-circle {
