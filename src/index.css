@@ -32,7 +32,7 @@ body {
 
 .description {
   @apply
-  font-extralight
+  font-normal
   text-lg
 }
 
