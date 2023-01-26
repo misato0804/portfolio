@@ -29,8 +29,15 @@
       "title": "As a concert promoter in Japan",
       "description": "As a concert promoter with over 6 years of experience, I had gotten involved a tons of variety of concert despite of the scale. My previous company organizes the biggest music festival in norther Japan every spring and I was in charge of the biggest stage as a director. From booking artists to management of its budget, which is related to the festival, I took the responsibility. It sounds like a really tough work though (yeah...it did...hahaha), at the same time I got to communicate with so many people with different background. That is my irreplaceable treasure to anything."
     },
-    "" : {
-
+    "pleasure" : {
+      "hiking" : {
+        "title" : "Hiking",
+        "description": "In my free time, I love to go hiking and explore somewhere new I've never been. If you want to join, hit me up!!"
+      },
+      "leaningLanguage": {
+        "title": "Learning German",
+        "description": "While I'm studying English, I realize leaning other language, which is similar to English could expand my chance to communicate people across the world. I'm still a beginner though, my goal is adding German to this my portfolio as a third language!"
+      }
     }
   }
 }

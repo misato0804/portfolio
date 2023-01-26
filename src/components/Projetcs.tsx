@@ -6,7 +6,7 @@ const Projects = () => {
         <div className="grid gap-4 md:grid-cols-2">
             <Project_card
                 title={"My portfolio"}
-                description={"lessons - all freely available to the public. We also have thousands of freeCodeCamp study groups around the world."}
+                description={""}
                 skills={["React", "Typescript", "Tailwind"]}
                 video={`${process.env.PUBLIC_URL}/movie.mp4`}
                 github={"https://github.com/misato0804/portfolio"}
@@ -14,27 +14,19 @@ const Projects = () => {
             />
             <Project_card
                 title={"Job seed"}
-                description={"lessons - all freely available to the public. We also have thousands of freeCodeCamp study groups around the world."}
-                skills={["React", "Typescript", "Tailwind", "MUI", "Node.js"]}
+                description={"Full-stack CRUD application with user auth.\nIt can help you organize your schedule of job hunting."}
+                skills={["React", "Typescript", "Tailwind", "Node.js", "PostgreSQL", "Redux"]}
                 video={`${process.env.PUBLIC_URL}/movie.mp4`}
-                github={"https://github.com/misato0804/portfolio_TS"}
-                link={"https://tailwindcss.com/docs/cursor"}
-            />
-            <Project_card
-                title={"Van stage"}
-                description={"lessons - all freely available to the public. We also have thousands of freeCodeCamp study groups around the world."}
-                skills={["React", "Typescript", "Tailwind", "MUI", "Node.js"]}
-                video={`${process.env.PUBLIC_URL}/movie.mp4`}
-                github={"https://github.com/misato0804/portfolio_TS"}
-                link={"https://tailwindcss.com/docs/cursor"}
+                github={"https://github.com/keento0809/jobseed"}
+                link={"https://jobseed.vercel.app/"}
             />
             <Project_card
                 title={"Nature Buddy"}
                 description={"lessons - all freely available to the public. We also have thousands of freeCodeCamp study groups around the world."}
-                skills={["Next.js", "Typescript", "MUI", "Node.js", "MongoDB"]}
+                skills={["Next.js", "Typescript", "MUI", "Styled component","Node.js", "GraphQL"]}
                 video={`${process.env.PUBLIC_URL}/movie.mp4`}
-                github={"https://github.com/misato0804/portfolio_TS"}
-                link={"https://tailwindcss.com/docs/cursor"}
+                github={"https://github.com/misato0804/nature-buddy"}
+                // link={"https://tailwindcss.com/docs/cursor"}
             />
         </div>
     );

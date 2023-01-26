@@ -22,6 +22,17 @@ const About = () => {
         }
     ]
 
+    const hobbies: aboutMe[] = [
+        {
+            title: `${t("about.pleasure.hiking.title")}`,
+            description: `${t("about.pleasure.hiking.description")}`
+        },
+        {
+            title: `${t("about.pleasure.leaningLanguage.title")}`,
+            description: `${t("about.pleasure.leaningLanguage.description")}`
+        }
+    ]
+
     return (
         <section>
             <h3 className="z-0 fixed text-9xl origin-bottom-left rotate-90 text-back-text top-40 left-0 font-extrabold">About me.</h3>
@@ -30,7 +41,7 @@ const About = () => {
             <div className="mt-6">
                 {AboutMe.map(item =>
                     <ul className="about-container relative ">
-                        <li className="list-circle pl-8 pb-12 mt-[20px]">
+                        <li className="list-circle pl-8 pb-12 mt-[12px]">
                             <h3 className="underline font-bold text-lg">{item.title}</h3>
                             <p className="mt-4 text-sm leading-6">
                                 {item.description}
@@ -38,11 +49,11 @@ const About = () => {
                         </li>
                     </ul>)}
             </div>
-            <h2 className="mt-20 text-xl font-extrabold">My reads</h2>
+            <h2 className="mt-20 text-xl font-extrabold">A bit more about me...</h2>
             <div className="mt-6">
-                {AboutMe.map(item =>
+                {hobbies.map(item =>
                     <ul className="about-container relative ">
-                        <li className="list-circle pl-8 pb-20 mt-[20px]">
+                        <li className="list-circle pl-8 pb-20 mt-[12px]">
                             <h3 className="underline font-bold text-lg">{item.title}</h3>
                             <p className="mt-4 text-sm leading-6">
                                 {item.description}
