@@ -1,18 +1,47 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import {useModalContext} from "../util/modalContext";
 
-const ModalMenu = () => {
+type ModalProps = {
+    setLang:  React.Dispatch<React.SetStateAction<string>>
+}
+
+const ModalMenu: React.FC<ModalProps> = ({setLang} : ModalProps) => {
 
     const {t, i18n} = useTranslation();
-    const {openModal,setOpenModal} = useModalContext()
+    const {setOpenModal} = useModalContext()
+    const navigate = useNavigate()
+
+    const clickLinkHandler = (e: React.MouseEvent<HTMLSpanElement>) => {
+        const link = e.currentTarget.innerText
+        e.preventDefault()
+        setOpenModal(false)
+        switch (link) {
+            case "Home":
+            case "ホーム":
+                navigate(`/`)
+                break
+            case "About":
+            case "アバウト":
+                navigate("/about")
+                break
+            case "Resume":
+            case "履歴書":
+                navigate("/resume")
+                break
+            case "Contact":
+            case "連絡先":
+                navigate("/contact")
+                break
+        }
+    }
 
     return (
-        <div className="navbar-menu relative z-50 ">
-            <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <div className="navbar-menu relative z-[1001] ">
+            <div className="navbar-backdrop fixed inset-0 bg-gray-900 opacity-25"></div>
             <nav
-                className="fixed top-0 left-0 bottom-0 flex flex-col w-4/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto ">
+                className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-back-text border-r overflow-y-auto ">
                 <div className="flex items-center mb-8">
                     <a className="mr-auto text-3xl font-bold leading-none" href="#">
                         <img src={`${process.env.PUBLIC_URL + '/logoMT.png'}`} alt="" width={50}/>
@@ -31,23 +60,27 @@ const ModalMenu = () => {
                 <div>
                     <ul>
                         <li className="mb-1">
-                            <Link className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                               to="/">Home</Link>
+                            <span className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-back-text rounded"
+                                    onClick={clickLinkHandler}
+                            >{t("nav.home")}</span>
                         </li>
                         <li className="mb-1">
-                            <Link className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                               to="/about">About</Link>
+                            <span className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-back-text rounded"
+                                    onClick={clickLinkHandler}
+                            >{t("nav.about")}</span>
                         </li>
                         <li className="mb-1">
-                            <Link className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                               to="/resume">Resume</Link>
+                            <span className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-back-text rounded"
+                                    onClick={clickLinkHandler}
+                            >{t("nav.resume")}</span>
                         </li>
                         <li className="mb-1">
-                            <Link className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                               to="/contact">Contact</Link>
+                            <span className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-back-text rounded"
+                                    onClick={clickLinkHandler}
+                            >{t("nav.contact")}</span>
                         </li>
                         <li className="mb-1">
-                            <select id="languages" className="block w-full p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" >
+                            <select onChange={(event) =>setLang(event.target.value)} id="languages" className="block w-full p-4 text-sm font-semibold text-gray-400 bg-back-text hover:bg-blue-50 hover:text-back-text rounded" >
                                 <option selected>{t("nav.languages")}</option>
                                 <option value="en">{t("nav.language.en")}</option>
                                 <option value="ja">{t("nav.language.ja")}</option>

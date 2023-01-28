@@ -65,7 +65,7 @@ const Nav: FC = () => {
                     </div>
                 }
             </div>
-            {openModal && windowDimensions.width < 768 ? <ModalMenu/> : null}
+            {openModal && windowDimensions.width < 768 ? <ModalMenu setLang={setLang}/> : null}
         </nav>
     );
 };
