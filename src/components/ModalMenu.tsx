@@ -1,11 +1,12 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import {useTranslation} from "react-i18next";
+import {useModalContext} from "../util/modalContext";
 
 const ModalMenu = () => {
 
     const {t, i18n} = useTranslation();
-
+    const {openModal,setOpenModal} = useModalContext()
 
     return (
         <div className="navbar-menu relative z-50 ">
@@ -16,7 +17,10 @@ const ModalMenu = () => {
                     <a className="mr-auto text-3xl font-bold leading-none" href="#">
                         <img src={`${process.env.PUBLIC_URL + '/logoMT.png'}`} alt="" width={50}/>
                     </a>
-                    <button className="navbar-close">
+                    <button
+                        className="navbar-close"
+                        onClick={() => setOpenModal(false)}
+                    >
                         <svg className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

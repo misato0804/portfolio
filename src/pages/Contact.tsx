@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
-import useCopyToClipboard from "../hooks/useCopyClipboard";
+import useCopyToClipboard from "../util/useCopyClipboard";
 import emailjs from '@emailjs/browser';
 import MailModal from "../components/MailModal";
 

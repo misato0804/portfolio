@@ -1,6 +1,8 @@
 import React, {FC, useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 import { useTranslation } from 'react-i18next';
+import {useModalContext} from "../util/modalContext";
+import ModalMenu from "./ModalMenu";
 
 const Nav: FC = () => {
     const [t, i18n] = useTranslation();
@@ -9,6 +11,8 @@ const Nav: FC = () => {
     const setLanguage = (e: React.ChangeEvent<{ value: string }>) => {
         setLang(e.target.value)
     }
+
+    const {openModal,setOpenModal} = useModalContext()
 
     useEffect(() => {
         i18n.changeLanguage(lang);
@@ -53,12 +57,15 @@ const Nav: FC = () => {
                         </select>
                     </ul>
                     :
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 cursor-pointer" fill="none"
-                         viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
+                    <div onClick={() => setOpenModal(true)}>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 cursor-pointer" fill="none"
+                             viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </div>
                 }
             </div>
+            {openModal && windowDimensions.width < 768 ? <ModalMenu/> : null}
         </nav>
     );
 };

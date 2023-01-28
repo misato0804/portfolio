@@ -1,9 +1,8 @@
-import React, {useEffect} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import Button from "../components/partials/Button";
 import {Link} from "react-router-dom";
 import Projects from "../components/Projetcs";
 import {useTranslation} from "react-i18next";
-import ModalMenu from "../components/ModalMenu";
 
 const Home = () => {
     const {t, i18n} = useTranslation();
@@ -68,7 +67,6 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <ModalMenu/>
         </>
     )
         ;
