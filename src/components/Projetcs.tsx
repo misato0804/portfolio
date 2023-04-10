@@ -1,32 +1,40 @@
 import React from 'react';
-import Project_card from "./ProjectCard";
+import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
     return (
         <div className="grid gap-4 md:grid-cols-2">
-            <Project_card
-                title={"My portfolio"}
-                description={"Full-stack CRUD application with user auth.\nIt can help you organize"}
-                skills={["React", "Typescript", "Tailwind"]}
-                video={`${process.env.PUBLIC_URL}/portfolio.mov`}
-                github={"https://github.com/misato0804/portfolio"}
-                link={"https://misatotanno.vercel.app/"}
+            <ProjectCard
+                title='PortFolio'
+                image='/portfolio.jpg'
+                description='My portfolio site which supports for English and Japanese.'
+                github='https://github.com/misato0804/portfolio'
+                link='https://github.com/misato0804/portfolio'
+                skills={['React', 'Typescript', 'Tailwind CSS']}
             />
-            <Project_card
-                title={"Job seed"}
-                description={"Full-stack CRUD application with user auth.\nIt can help you organize your schedule of job hunting."}
-                skills={["React", "Typescript", "Tailwind", "Node.js", "PostgreSQL", "Redux"]}
-                image={`${process.env.PUBLIC_URL}/jobseed.png`}
-                github={"https://github.com/keento0809/jobseed"}
-                link={"https://jobseed.vercel.app/"}
+            <ProjectCard
+                title='Jobseed'
+                image='/jobseed.jpg'
+                description='Helps job hunters to organize company information depends on its selection process.'
+                github='https://github.com/keento0809/jobseed'
+                link='https://jobseed.vercel.app/'
+                skills={['React', 'Typescript', 'Tailwind CSS', 'PostgreSQL', 'Express']}
             />
-            <Project_card
-                title={"Nature Buddy"}
-                description={"This application is a platform for finding buddies to go on activities you like."}
-                skills={["Next.js", "Typescript", "MUI", "Styled component","Node.js", "GraphQL"]}
-                image={`${process.env.PUBLIC_URL}/comingsooon.png`}
-                github={"https://github.com/misato0804/nature-buddy"}
-                // link={"https://tailwindcss.com/docs/cursor"}
+            <ProjectCard
+                title='Tourlist'
+                image='/tourlist.jpg'
+                description='Travel list in Japan. Using headless CMS for database.'
+                github='https://github.com/misato0804/tourlist'
+                link='https://tourlist.vercel.app/'
+                skills={['React', 'Next13', 'Typescript','Tailwind CSS', 'Graph CMS']}
+            />
+            <ProjectCard
+                title='Nature Buddy'
+                image='/naturebuddy.jpg'
+                description='This is full-stack application for every outdoor lover. You can gather and join outdoor activity through this app.'
+                github='https://github.com/misato0804/nature-buddy'
+                link='https://nature-buddy.vercel.app/'
+                skills={['React', 'Next.js', 'NextAuth','Typescript','MUI', 'MongoDB', 'Socket.io']}
             />
         </div>
     );
