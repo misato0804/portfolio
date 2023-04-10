@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ProjectCard from "./ProjectCard";
+import DetailModal from "./DetailModal";
 
 const Projects = () => {
+
+    const [clickedProject, setClickedProject] = useState<string | undefined>()
+    const [showModal, setShowModal] = useState<boolean>(false)
+
     return (
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
             <ProjectCard
                 title='PortFolio'
                 image='/portfolio.jpg'
@@ -11,6 +16,8 @@ const Projects = () => {
                 github='https://github.com/misato0804/portfolio'
                 link='https://github.com/misato0804/portfolio'
                 skills={['React', 'Typescript', 'Tailwind CSS']}
+                setClickedProject={setClickedProject}
+                setShowModal={setShowModal}
             />
             <ProjectCard
                 title='Jobseed'
@@ -19,6 +26,8 @@ const Projects = () => {
                 github='https://github.com/keento0809/jobseed'
                 link='https://jobseed.vercel.app/'
                 skills={['React', 'Typescript', 'Tailwind CSS', 'PostgreSQL', 'Express']}
+                setClickedProject={setClickedProject}
+                setShowModal={setShowModal}
             />
             <ProjectCard
                 title='Tourlist'
@@ -27,6 +36,8 @@ const Projects = () => {
                 github='https://github.com/misato0804/tourlist'
                 link='https://tourlist.vercel.app/'
                 skills={['React', 'Next13', 'Typescript','Tailwind CSS', 'Graph CMS']}
+                setClickedProject={setClickedProject}
+                setShowModal={setShowModal}
             />
             <ProjectCard
                 title='Nature Buddy'
@@ -35,7 +46,15 @@ const Projects = () => {
                 github='https://github.com/misato0804/nature-buddy'
                 link='https://nature-buddy.vercel.app/'
                 skills={['React', 'Next.js', 'NextAuth','Typescript','MUI', 'MongoDB', 'Socket.io']}
+                setClickedProject={setClickedProject}
+                setShowModal={setShowModal}
             />
+            {  <DetailModal
+                setShowModal={setShowModal}
+                clickedProject={clickedProject}
+                setClickedProject={setClickedProject}
+                showModal={showModal}
+            /> }
         </div>
     );
 };

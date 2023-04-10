@@ -2,6 +2,7 @@ import React from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import {useModalContext} from "../util/modalContext";
+import {AiOutlineClose} from 'react-icons/ai'
 
 type ModalProps = {
     setLang:  React.Dispatch<React.SetStateAction<string>>
@@ -48,13 +49,11 @@ const ModalMenu: React.FC<ModalProps> = ({setLang} : ModalProps) => {
                     </a>
                     <button
                         className="navbar-close"
-                        onClick={() => setOpenModal(false)}
+                        onClick={() => {
+                            setOpenModal(false)
+                        }}
                     >
-                        <svg className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
-                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
+                        <AiOutlineClose/>
                     </button>
                 </div>
                 <div>
