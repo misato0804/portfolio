@@ -21,7 +21,7 @@ const Project_card = (props: project) => {
                 onClick={() => {props.setClickedProject(props.title)}}
             >
                 <img src={`${process.env.PUBLIC_URL + props.image}`}
-                     className="min-w-full h-96 object-cover object-bottom rounded-2xl object-left-bottom"/>
+                     className="min-w-full h-96 object-cover object-center rounded-2xl object-left-bottom"/>
                 <div
                     className={`rounded-xl w-full h-full absolute bottom-0 hover:opacity-95 opacity-0 duration-300  bg-gradient-to-b from-[rgba(155,194,228,0.3)] to-[rgba(0,0,0,1)] z-10 text-left`}>
                     <div className='absolute bottom-0'>
