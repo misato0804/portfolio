@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-import {RiExternalLinkFill} from "react-icons/ri"
-import DetailModal from "./DetailModal";
 
 type project = {
     title: string;
@@ -20,6 +18,7 @@ const Project_card = (props: project) => {
         <>
             <div
                 className={`w-full relative rounded-xl text-white `}
+                onClick={() => {props.setClickedProject(props.title)}}
             >
                 <img src={`${process.env.PUBLIC_URL + props.image}`}
                      className="min-w-full h-96 object-cover object-bottom rounded-2xl object-left-bottom"/>

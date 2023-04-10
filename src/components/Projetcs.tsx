@@ -35,7 +35,7 @@ const Projects = () => {
                 description='Travel list in Japan. Using headless CMS for database.'
                 github='https://github.com/misato0804/tourlist'
                 link='https://tourlist.vercel.app/'
-                skills={['React', 'Next13', 'Typescript','Tailwind CSS', 'Graph CMS']}
+                skills={['React', 'Next13', 'Typescript','Tailwind CSS', 'Graph CMS', 'GraphQL']}
                 setClickedProject={setClickedProject}
                 setShowModal={setShowModal}
             />
@@ -49,7 +49,7 @@ const Projects = () => {
                 setClickedProject={setClickedProject}
                 setShowModal={setShowModal}
             />
-            {  <DetailModal
+            { <DetailModal
                 setShowModal={setShowModal}
                 clickedProject={clickedProject}
                 setClickedProject={setClickedProject}
