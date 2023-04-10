@@ -1,6 +1,5 @@
 import React from 'react';
-import { Page } from "react-pdf";
-import { Document } from "react-pdf/dist/esm/entry.webpack";
+import { Document, Page } from "react-pdf";
 import resume from "../misatotanno.pdf";
 import {Link} from "react-router-dom";
 
@@ -25,8 +24,6 @@ const Resume = () => {
                 <p className="mt-10">Thank you for taking a look my resume!</p>
                 <p className="mb-10 tracking-wide">Would you like to
                     <Link to="/contact" className="underline"><strong> message me ?</strong></Link>
-                    <span> , </span>
-                    <a href="https://1drv.ms/b/s!AmRGcW1ZJmKdgcF6sa7uYiCIT4yq8w?e=QS28Ap" className="underline cursor-pointer"><strong> view this resume ?</strong> </a>
                     <span> or </span>
                     <span className="underline cursor-pointer" onClick={downloadPdf}><strong>download it ?</strong></span>
                 </p>
