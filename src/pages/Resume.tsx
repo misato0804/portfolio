@@ -1,9 +1,9 @@
-import React from 'react';
-import { Document, Page } from "react-pdf";
-import resume from "../misatotanno.pdf";
+import React, {useEffect, useRef} from 'react';
+import resume from "../resume.pdf";
 import {Link} from "react-router-dom";
 
 const Resume = () => {
+
     const downloadPdf = () => {
         fetch(resume).then( res => {
             res.blob().then(blob => {
@@ -27,11 +27,9 @@ const Resume = () => {
                     <span> or </span>
                     <span className="underline cursor-pointer" onClick={downloadPdf}><strong>download it ?</strong></span>
                 </p>
-                <div className="flex justify-center">
-                    <Document file={resume} size="B5" >
-                        <Page pageNumber={1} />
-                    </Document>
-                </div>
+                <img
+                    className='mx-auto w-full md:w-3/5 z-[999] relative'
+                    src={`${process.env.PUBLIC_URL + '/resume.png'}` }/>
             </section>
         </>
 

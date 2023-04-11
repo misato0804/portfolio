@@ -21,7 +21,7 @@ const Footer = () => {
                         onMouseLeave={() => setSize1(20)}
                     />
                 </a>
-                <a href="linkedin.com/in/misato-tanno-a2b475221" target="_blank">
+                <a href="https://www.linkedin.com/in/misato-tanno-a2b475221/" target="_blank">
                     < AiOutlineLinkedin
                         className="mx-auto cursor-pointer duration-300"
                         size={size2}
