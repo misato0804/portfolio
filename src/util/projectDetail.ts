@@ -25,7 +25,7 @@ const projectDetail : Project[] = [
         image: '/jobseed.jpg'
     },
     {
-        title: 'Nature Buddy',
+        title: 'Nature Buddy *under maintenance',
         description: "This is a full-stack application that allows users to find people with whom they can engage in outdoor activities. Once register, user can create and join activities. This enables account creation through existing Google, Facebook, and Github accounts by NextAuth.\n\nI am working on adding a real-time chat feature to allow users to communicate with each other",
         link:'https://nature-buddy.vercel.app/',
         github: 'https://github.com/misato0804/nature-buddy',
