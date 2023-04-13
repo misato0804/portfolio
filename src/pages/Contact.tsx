@@ -44,7 +44,7 @@ const Contact = () => {
 
     return (
         <>
-            <h3 className="z-0 fixed text-9xl origin-bottom-left rotate-90 text-back-text top-40 left-0 font-extrabold">Contact.</h3>
+            <h3 className="z-0 fixed text-9xl origin-bottom-left rotate-90 text-back-text top-10 left-0 font-extrabold">Contact.</h3>
             <section className="relative z-[100]">
                 <div className="flex justify-center m-auto max-w-5xl">
                     <div>

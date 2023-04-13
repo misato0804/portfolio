@@ -81,11 +81,11 @@ const DetailModal = ({clickedProject, setClickedProject, setShowModal, showModal
                     </div>
                     <div
                         className='grid grid-cols-2 absolute bottom-0 w-screen md:w-[110%]  md:-mx-3 mx-[calc(50%-50vw)]'>
-                        <div className='bg-gray-800 py-4 cursor-pointer hover:opacity-50'>
+                        {project.title !== "Nature Buddy" ? <div className='bg-gray-800 py-4 cursor-pointer hover:opacity-50'>
                             <a href={project.link} target='_blank'>Go to demo site<VscLinkExternal
                                 className='inline ml-2 pb-0.5'/></a>
-                        </div>
-                        <div className='bg-black py-4 cursor-pointer hover:opacity-50'>
+                        </div> : null }
+                        <div className={`bg-black py-4 cursor-pointer hover:opacity-50 ${project.title === 'Nature Buddy' ? 'col-span-2' : null}`}>
                             <a href={project.github} target='_blank'>Go to GitHub<AiFillGithub
                                 className='inline ml-2 pb-0.5'/></a>
                         </div>

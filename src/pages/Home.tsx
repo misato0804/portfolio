@@ -16,7 +16,7 @@ const Home = () => {
 
     return (
         <>
-            <h3 className="z-0 fixed text-9xl origin-bottom-left rotate-90 text-back-text top-40 left-0 font-extrabold">Hi,there!!</h3>
+            <h3 className="z-0 fixed text-9xl origin-bottom-left rotate-90 text-back-text top-10 left-0 font-extrabold">Hi,there!!</h3>
             <section className="relative w-4/5 mt-20 mx-auto text-center z-10">
                 <div className="w-full m-auto">
                     <h3 className="sub-title"><strong>Hi, there. I'm Misato Tanno</strong></h3>

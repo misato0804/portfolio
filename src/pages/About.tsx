@@ -35,8 +35,7 @@ const About = () => {
 
     return (
         <>
-            <h3 className="-z-10 fixed text-9xl origin-bottom-left rotate-90 text-back-text top-40 left-0 font-extrabold">About
-                me.</h3>
+            <h3 className="-z-10 fixed text-8xl w-[90vh] origin-bottom-left rotate-90 text-back-text top-10 left-0 font-extrabold">About me.</h3>
             <section>
                 <h1 className="text-4xl font-extrabold">About me.</h1>
                 <h2 className="mt-10 text-xl font-extrabold">Along the way of my career</h2>

@@ -18,7 +18,7 @@ const Resume = () => {
 
     return (
         <>
-            <h3 className="z-0 fixed text-9xl origin-bottom-left rotate-90 text-back-text top-40 left-0 font-extrabold">Resume.</h3>
+            <h3 className="-z-10 fixed text-9xl origin-bottom-left rotate-90 text-back-text top-10 left-0 font-extrabold">Resume.</h3>
             <section>
                 <h1 className="text-4xl font-extrabold">Resume.</h1>
                 <p className="mt-10">Thank you for taking a look my resume!</p>
