@@ -94,7 +94,7 @@ const DetailModal = ({clickedProject, setClickedProject, setShowModal, showModal
                         <h2 className='text-left font-bold text-2xl mb-3'>About</h2>
                         <h6 className='text-sm text-left'>{project.description}</h6>
                         <h2 className='text-left font-bold text-2xl mt-7 mb-3'>Technologies & Libraries</h2>
-                        <div className='flex flex-wrap '>
+                        <div className=''>
                             {project.skills.map(skill => (
                                 <span key={skill}
                                       className="inline-block px-4 rounded-2xl mr-2 mb-2 py-2 bg-neutral-300 text-back-text text-xs">
@@ -104,9 +104,17 @@ const DetailModal = ({clickedProject, setClickedProject, setShowModal, showModal
                         </div>
                     </div>
                     <div
-                        className={`absolute bottom-0 w-screen md:w-[110%]  md:-mx-3 mx-[calc(50%-50vw)] grid ${(project.id !== 1) && 'grid-cols-2'}`} >
-                        {demoSiteRender()}
-                        {GitHUBAction}
+                        className={`absolute bottom-0 w-screen md:w-[110%]  md:-mx-3 mx-[calc(50%-50vw)] grid grid-cols-2`} >
+                        <div className='bg-gray-800 py-4 cursor-pointer hover:opacity-50'>
+                            <a href={project.link} target='_blank'>Go to demo site<VscLinkExternal
+                                className='inline ml-2 pb-0.5'/>
+                            </a>
+                        </div>
+                        <div
+                            className={`bg-black py-4 cursor-pointer hover:opacity-50`}>
+                            <a href={project.github} target='_blank'>Go to GitHub<AiFillGithub
+                                className='inline ml-2 pb-0.5'/></a>
+                        </div>
                     </div>
                 </div>
             </div>
