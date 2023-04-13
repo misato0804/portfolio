@@ -49,6 +49,16 @@ const Projects = () => {
                 setClickedProject={setClickedProject}
                 setShowModal={setShowModal}
             />
+            <ProjectCard
+                title='P plane'
+                image='/pplane.jpg'
+                description='Helps new Japanese comers in Vancouver to find a mentor.'
+                github=''
+                link=''
+                skills={['React', 'Typescript', 'Next.JS', 'MUI']}
+                setClickedProject={setClickedProject}
+                setShowModal={setShowModal}
+            />
             { <DetailModal
                 setShowModal={setShowModal}
                 clickedProject={clickedProject}

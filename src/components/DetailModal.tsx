@@ -14,6 +14,7 @@ type ModalProps = {
 const DetailModal = ({clickedProject, setClickedProject, setShowModal, showModal}: ModalProps) => {
 
     const [project, setProject] = useState<Project>({
+        id:0,
         title: '',
         description: '',
         skills: [""],
@@ -30,6 +31,29 @@ const DetailModal = ({clickedProject, setClickedProject, setShowModal, showModal
         }
         projectHandler()
     }, [clickedProject])
+
+    const demoSiteAction = (
+        <div className='bg-gray-800 py-4 cursor-pointer hover:opacity-50'>
+            <a href={project.link} target='_blank'>Go to demo site<VscLinkExternal
+                className='inline ml-2 pb-0.5'/>
+            </a>
+        </div>
+    )
+
+    const GitHUBAction = (
+        <div
+            className={`bg-black py-4 cursor-pointer hover:opacity-50 ${!(project.id === 3 || project.id === 5 ) && 'col-span-2'} `}>
+            <a href={project.github} target='_blank'>Go to GitHub<AiFillGithub
+                className='inline ml-2 pb-0.5'/></a>
+        </div>
+    )
+
+    const demoSiteRender = () => {
+
+        if(project.id === 1 || project.id === 2 || project.id === 4)
+
+        return demoSiteAction
+    }
 
     const basicStyle =
         'md:border-double ' +
@@ -80,15 +104,9 @@ const DetailModal = ({clickedProject, setClickedProject, setShowModal, showModal
                         </div>
                     </div>
                     <div
-                        className='grid grid-cols-2 absolute bottom-0 w-screen md:w-[110%]  md:-mx-3 mx-[calc(50%-50vw)]'>
-                        {project.title !== "Nature Buddy" ? <div className='bg-gray-800 py-4 cursor-pointer hover:opacity-50'>
-                            <a href={project.link} target='_blank'>Go to demo site<VscLinkExternal
-                                className='inline ml-2 pb-0.5'/></a>
-                        </div> : null }
-                        <div className={`bg-black py-4 cursor-pointer hover:opacity-50 ${project.title === 'Nature Buddy' ? 'col-span-2' : null}`}>
-                            <a href={project.github} target='_blank'>Go to GitHub<AiFillGithub
-                                className='inline ml-2 pb-0.5'/></a>
-                        </div>
+                        className={`absolute bottom-0 w-screen md:w-[110%]  md:-mx-3 mx-[calc(50%-50vw)] grid ${(project.id !== 1) && 'grid-cols-2'}`} >
+                        {demoSiteRender()}
+                        {GitHUBAction}
                     </div>
                 </div>
             </div>
