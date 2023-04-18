@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react';
-import resume from "../resume.pdf";
+import resume from "../MisatoTanno.pdf";
 import {Link} from "react-router-dom";
 
 const Resume = () => {
@@ -27,9 +27,10 @@ const Resume = () => {
                     <span> or </span>
                     <span className="underline cursor-pointer" onClick={downloadPdf}><strong>download it ?</strong></span>
                 </p>
-                <img
-                    className='mx-auto w-full md:w-3/5 z-[999] relative'
-                    src={`${process.env.PUBLIC_URL + '/resume.png'}` }/>
+                <iframe
+                    src={resume }
+                    className='mx-auto w-full h-[80vh]'
+                />
             </section>
         </>
 
